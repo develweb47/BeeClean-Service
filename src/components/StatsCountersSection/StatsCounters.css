@@ -1,0 +1,149 @@
+/* SECTION LAYOUT */
+.stats-section {
+  background: #fff9e5;
+  padding: 8% 0;
+  width: 100%;
+}
+
+.stats-container {
+  margin: 0 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+/* CARD */
+/* Force all cards to have same height */
+.stat-box {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;       /* perfect vertical centering */
+  overflow: hidden; /* FIX bottom border radius clipping */
+  border-radius: 24px;
+}
+
+
+.stat-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* Soft gold border highlight */
+.stat-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  border: 2px solid rgba(255, 200, 80, 0.6);
+  opacity: 0;
+  transition: 0.45s;
+}
+
+.stat-box:hover::after {
+  opacity: 1;
+}
+
+/* ICON FIX (VISIBLE & CLEAN) */
+.stat-icon {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.stat-icon i {
+  font-size: 55px;
+  color: #d4a019;
+  z-index: 2;
+  position: relative;
+}
+
+
+/* Small shimmer */
+.shine {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -40px;
+  width: 40px;
+  height: 90px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.7), transparent);
+  transform: rotate(20deg);
+  animation: shineMove 2.2s infinite;
+}
+
+@keyframes shineMove {
+  0% { left: -40px; opacity: 0; }
+  40% { opacity: 1; }
+  100% { left: 110px; opacity: 0; }
+}
+
+/* NUMBERS & TEXT FIXED */
+.stat-number {
+  font-size: 50px;
+  font-weight: 800;
+  color: #d4a019;
+  margin: 5px 0 10px;
+  line-height: 1;
+}
+
+.stat-number span {
+  font-size: 50px;
+}
+
+.stat-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #b8870b;
+  margin-top: 5px;
+}
+
+/* APPEAR ANIMATIONS */
+.fade-up {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+    justify-items: center;  
+  }
+
+  .stats-section{
+    padding: 10% 0;
+  }
+
+  .stat-box {
+    width: 70%;                
+    height: auto;          
+    padding: 40px 20px;
+    text-align: center;      
+  }
+}
+
+@media (max-width: 700px) {
+  .stat-box {
+    width: 80%;                     
+  }
+  .stat-number span {
+    font-size: 35px;
+  }
+  .stat-text {
+    line-height: 1.6;
+    font-size: 17px;
+  }
+}
+
+

@@ -1,0 +1,144 @@
+:root {
+  --purple: #5A009A;
+  --purple-dark: #420072;
+  --yellow: #FFD500;
+  --bg-light: #FFF9E6;
+}
+
+.details-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6% 4%;
+  background: var(--bg-light);
+  margin-top: 50px;
+}
+
+.details-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--purple-dark);
+  margin-bottom: 20px;
+}
+
+.details-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.details-name {
+  background: var(--yellow);
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--purple-dark);
+  margin-bottom: 25px;
+}
+
+/* Sections */
+.details-section {
+  background: #fafafa;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border-right: 5px solid var(--purple);
+}
+
+.details-section h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--purple-dark);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.details-section p {
+  color: #333;
+  line-height: 1.7;
+}
+
+.details-services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details-services li {
+  background: white;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  border-left: 3px solid var(--purple);
+}
+
+/* Buttons */
+.details-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.btn-details, .btn-select {
+  font-family: "Tajawal", sans-serif; 
+  padding: 12px 16px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s;
+}
+
+/* Back Button */
+.btn-details {
+  background: transparent;
+  border: 2px solid var(--purple);
+  color: var(--purple-dark);
+}
+
+.btn-details:hover {
+  background: var(--purple);
+  color: white;
+}
+
+/* Select Button */
+.btn-select {
+  background: var(--purple);
+  color: white;
+}
+
+.btn-select:hover {
+  background: var(--purple-dark);
+}
+
+/* WhatsApp Button */
+.order-whatsapp-btn {
+  background: #25D366;
+  color: white !important;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebd57;
+}
+
+@media (max-width: 900px) {
+
+  .details-page{
+    margin-top: 60px;
+  }
+}

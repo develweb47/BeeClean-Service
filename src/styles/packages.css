@@ -1,0 +1,158 @@
+:root {
+  --purple: #5A009A;
+  --purple-dark: #420072;
+  --yellow: #FFD500;
+  --bg-light: #FFF9E6;
+}
+
+/* Page Container */
+.packages-page {
+  padding: 0 20px;
+  margin: 0 auto;
+  background-color: var(--bg-light);
+  margin-top: 12%;
+  margin-bottom: 2.5%;
+}
+
+/* Title Centered */
+.packages-title {
+  text-align: center;
+  font-size: 36px;
+  color: var(--purple-dark);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.packages-subtext {
+  text-align: center;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* Packages Grid */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 25px;
+}
+
+/* Package Card */
+.package-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px; /* forces equal height cards */
+  padding-bottom: 20px;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Package Title Background */
+.package-title {
+  background: var(--yellow);
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: var(--purple-dark);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+/* Short description */
+.package-short {
+  color: #333;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+/* Target group */
+.package-target {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Price */
+.package-price {
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 14px;
+}
+
+/* Buttons area */
+.package-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  align-items: center;
+  gap: 8px;     
+  width: 100%;
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s ease;
+}
+
+.package-buttons .btn {
+  flex: 1;               /* both buttons same width */
+  min-width: 120px;
+  text-align: center;
+  padding: 12px 18px;
+  border-radius: 10px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Button styles */
+.btn-show {
+  font-family: "Tajawal", sans-serif; 
+  background-color: transparent;
+  border: 2px solid var(--purple);
+  color: var(--purple-dark);
+}
+
+.btn-show:hover {
+  background-color: var(--purple);
+  color: white;
+}
+
+.btn-select {
+  font-family: "Tajawal", sans-serif; 
+  background-color: var(--purple);
+  color: white;
+}
+
+.btn-select:hover {
+  background-color: var(--purple-dark);
+}
+
+@media (max-width: 900px) {
+
+  .packages-page {
+    padding: 4%;
+    margin-top: 70px;
+  }
+}
+
+
+

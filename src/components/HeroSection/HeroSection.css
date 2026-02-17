@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+.hero {
+  background: #fff9e5;
+  padding: 30px;
+  text-align: center;
+  direction: rtl;
+  margin-top: 120px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 70px;
+  gap: 25px;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/*===============================================*/
+
+
+
+/*===============================================*/
+
+
+.wel-text {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #5A009A; 
+  margin-bottom: 12px;
+  text-align: center;
+  background: linear-gradient(90deg, #FFD500, #ffea80);
+  padding: 10px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  animation: welcomePop 0.8s ease-out forwards;
+  letter-spacing: 1px;
+}
+
+/* Animation */
+@keyframes welcomePop {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* shine layer */
+.wel-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: shineSweep 4s ease-in-out infinite;
+}
+
+@keyframes shineSweep {
+  0% {
+    left: -120%;
+  }
+  50% {
+    left: 120%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+
+.hero-text {
+  font-size: 1.25rem;
+  line-height: 2.3rem;
+  font-weight: 500;
+  color: #3C0073;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gentlePulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--pulse-color);
+  }
+  70% {
+    box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+
+.whatsapp-btn {
+  --pulse-color: rgba(37, 211, 102, 0.5); /* WhatsApp green */
+  animation: gentlePulse 2.5s infinite;
+}
+
+.call-btn {
+  --pulse-color: rgba(255, 149, 0, 0.5); /* Call orange */
+  animation: gentlePulse 3s infinite;
+}
+
+
+.hero-action-buttons a:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+
+
+
+.hero-order-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #3C0073;     /* Purple brand color */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+  animation: fadeInUp 0.9s ease;
+}
+
+/* Smooth animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Wrapper holding both buttons */
+.hero-action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  margin: 0 20px;
+}
+
+.hero-action-buttons a{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: 0.25s ease;
+}
+
+/* Base button style */
+.hero-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+/* WhatsApp button */
+.whatsapp-btn {
+  background: #25d366;
+}
+
+.whatsapp-btn i {
+  font-size: 45px;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5c;
+  transform: translateY(-5px);
+}
+
+/* Call button */
+.call-btn {
+  background: #ff9500;
+}
+
+.call-btn i{
+    font-size: 32px;
+}
+
+.call-btn:hover {
+  background: #d87d00;
+  transform: translateY(-5px);
+}
+
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .hero-content {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .wel-text {
+    font-size: 1.6rem;
+    padding: 8px 20px;
+    border-radius: 10px;
+  }
+
+  .hero{
+    margin-top: 80px;
+  }
+  .hero-content{
+    padding: 0 5px;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: #3C0073;
+    text-align: center;
+}
+
+  .hero-action-buttons {
+    gap: 60px;     /* Smaller gap */
+  }
+
+  .hero-order-text {
+    font-size: 1.5rem;
+  }
+}

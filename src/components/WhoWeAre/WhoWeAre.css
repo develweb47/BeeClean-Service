@@ -1,0 +1,114 @@
+.who-container {
+  direction: rtl;
+  text-align: right;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  font-family: "Cairo", sans-serif;
+  margin-top: 100px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #222;
+  border-right: 5px solid #FFD500;
+  padding-right: 10px;
+}
+
+.section {
+  background: #fff9e5;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 12px;
+  border-right: 4px solid #FFD500;
+}
+
+.section h3 {
+  color: #333;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.section p {
+  line-height: 1.9;
+  color: #444;
+}
+
+.paragraph {
+  margin: 15px 0;
+  line-height: 1.9;
+  color: #444;
+}
+
+.data-values {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.data-values li {
+  background: #fff;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border-right: 3px solid #FFD500;
+}
+
+.info-box {
+  background: #f3f3f3;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 30px;
+  line-height: 2;
+  border-right: 4px solid #FFD500;
+}
+
+strong {
+  color: #222;
+}
+
+@media (max-width: 900px) {
+  .who-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .who-text-box {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .who-title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .who-description {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .who-image {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+.info-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;        /* space between icon and text */
+  font-size: 1.1rem;
+}
+
+.info-icon {
+  font-size: 22px;
+  color: #333;    /* you can change the color */
+}
+

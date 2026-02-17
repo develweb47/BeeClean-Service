@@ -1,0 +1,66 @@
+.services-container {
+  background-color: #5a008a;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 15px;
+  margin-top: 140px;
+}
+
+.services-container h2 {
+  text-align: center;
+  background-color: #ffb300;
+  color: #5a008a;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 0;
+}
+
+.price {
+  color: #ffb300;
+}
+
+.icon-saudi_riyal_new{
+  font-family: "saudi_riyal";
+  font-size: 1.5rem;
+}
+
+@media (max-width: 900px){
+  .services-container{
+    margin-top: 112px;
+  }
+  
+  .icon-saudi_riyal_new{
+  font-family: "saudi_riyal";
+  font-size: 1.5rem;
+}
+
+  .price{
+    font-size: .9rem;
+  }
+  
+}
+
+.services-note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #444;
+  background: #fff7d1;
+  padding: 10px 15px;
+  border-right: 4px solid #ffca28;
+  border-radius: 6px;
+  line-height: 1.8;
+  text-align: right;
+}
+
